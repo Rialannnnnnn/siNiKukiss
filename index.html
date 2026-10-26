@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SiNiKukiss | Cookies Tebal Enam Rasa</title>
+<meta name="description" content="SiNiKukiss: cookies enam rasa, Rp20.000 per buah. Pesan mudah lewat WhatsApp.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="logo" href="#atas">SiNi<span>Kukiss</span></a>
+  <nav aria-label="Menu utama">
+    <a href="#menu">Menu</a>
+    <a href="#cari-rasa">Cari rasa</a>
+  </nav>
+  <button class="cart-btn" id="openCart" aria-label="Buka keranjang">
+    Keranjang <span class="badge" id="count">0</span>
+  </button>
+</header>
+
+<section class="hero" id="atas">
+  <canvas id="playground" aria-hidden="true"></canvas>
+  <div class="hero-text">
+    <p class="eyebrow">Cookies enam rasa</p>
+    <h1>Satu gigit,<br>susah berhenti.</h1>
+    <p class="sub">Kejar kukisnya, klik sampai remah beterbangan, lalu pilih yang paling bikin kamu lapar.</p>
+    <a class="cta" href="#menu">Lihat menu</a>
+  </div>
+  <p class="hero-hint">Coba sentuh atau klik kukis yang berkeliaran</p>
+</section>
+
+<section class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>Golden Hour</span><span>Hijau Bikin Nagih</span><span>Kopi Senja</span><span>Merah Merona</span><span>Gelap Terang</span><span>Pink Promise</span>
+    <span>Golden Hour</span><span>Hijau Bikin Nagih</span><span>Kopi Senja</span><span>Merah Merona</span><span>Gelap Terang</span><span>Pink Promise</span>
+  </div>
+</section>
+
+<main>
+  <section class="section" id="menu">
+    <h2>Menu SiNiKukiss</h2>
+    <p class="lead">Semua rasa Rp20.000 per buah. Tinggal pilih, jumlahnya atur sendiri.</p>
+    <div class="grid" id="products"></div>
+  </section>
+
+  <section class="section quiz" id="cari-rasa">
+    <h2>Lagi mood apa hari ini?</h2>
+    <p class="lead">Pilih satu, nanti kami tunjukkan kukis yang cocok.</p>
+    <div class="moods" id="moods"></div>
+    <div class="result" id="moodResult" aria-live="polite">Pilih mood di atas.</div>
+  </section>
+</main>
+
+<footer>
+  <p>SiNiKukiss &middot; Pesan lewat WhatsApp 0858-1578-7878</p>
+</footer>
+
+<div class="overlay" id="overlay">
+  <aside class="panel" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+    <button class="close" id="closeCart" aria-label="Tutup keranjang">&times;</button>
+    <h2 id="cartTitle">Keranjang kamu</h2>
+    <div class="items" id="items"></div>
+    <div class="total"><span>Total</span><span id="total">Rp0</span></div>
+    <label>Nama
+      <input id="name" placeholder="Nama pemesan" autocomplete="name">
+    </label>
+    <label>Alamat pengiriman
+      <textarea id="address" placeholder="Alamat lengkap"></textarea>
+    </label>
+    <label>Catatan (opsional)
+      <input id="note" placeholder="Misalnya: dibungkus kado">
+    </label>
+    <a class="checkout" id="wa" href="#" target="_blank" rel="noopener">Pesan lewat WhatsApp</a>
+  </aside>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<canvas id="fx" aria-hidden="true"></canvas>
+
+<script src="script.js"></script>
+</body>
+</html>
